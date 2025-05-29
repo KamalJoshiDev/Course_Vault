@@ -3,7 +3,7 @@ import React from "react";
 const UpcomingCourse = () => {
     return (
         <>
-            <section className="text-center py-8 w-full max-w-6xl mx-auto text-gray-900 lg:mt-6 mb-4">
+            <section className="text-center py-8 w-full mx-auto text-gray-900 lg:mt-6 mb-4 bg-[#F5F5F5] px-10 h-full">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-wide mb-12">
                     Upcoming Course
                 </h2>

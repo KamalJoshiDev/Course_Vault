@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Cookies from 'js-cookie';
 import { useFirebase } from "../Firebase/Firebase";
 import { useNavigate } from "react-router";
+import img from "../Assets/Navbar-assert/Course (2).png" 
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,12 +49,15 @@ const NavBar = () => {
     };
     return (
         <header>
-            <nav className="border-gray-200 py-2.5 bg-gray-100">
+            <nav className="border-gray-200 py-2.5 bg-[#FFFAFA] fixed top-0 z-10 w-full rounded-xl">
+
                 <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                     <Link to="/" className="flex items-center text-black">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap text-black">
-                            Course Vault
-                        </span>
+                    
+                             <div className="logo h-15 w-15 rounded-b-full overflow-hidden">
+                            <img src={img} alt="logo" />
+                             </div>
+                      
                     </Link>
 
                     <div className="flex items-center lg:order-2">
