@@ -9,11 +9,10 @@ const appRoutes = require('./Routes/Router.Routes.js')
 dotenv.config();
 
 const app = express();
-const corsOptions = {
-    origin: "http://localhost:5173",
-    credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors({ origin: "*", credentials: true }));
+
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -26,7 +25,7 @@ ConnectDB().then(() => {
 
     app.use("/api/v1", appRoutes);
 
-    const PORT = process.env.PORT || 1500;
+    const PORT = process.env.PORT || 6800;
     app.listen(PORT, () => {
         console.log(`Server is running at http://localhost:${PORT}`);
     });
